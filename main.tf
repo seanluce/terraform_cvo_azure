@@ -3,11 +3,11 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 2.26"
+      version = ">= 2.46.0"
     }
     netapp-cloudmanager = {
       source  = "NetApp/netapp-cloudmanager"
-      version = ">= 21.5.3"
+      version = ">= 21.9.4"
     }
   }
 }
@@ -104,8 +104,7 @@ data "azurerm_virtual_machine" "cm_connector_vm" {
 }
 
 resource "azurerm_role_assignment" "cm_role_assignment" {
-  #scope              = data.azurerm_subscription.azure_sub.id
-  scope               = azurerm_resource_group.cm_connector_rg.id
+  scope              = data.azurerm_subscription.azure_sub.id
   role_definition_name = "Contributor"
   principal_id       = data.azurerm_virtual_machine.cm_connector_vm.identity.0.principal_id
 }
