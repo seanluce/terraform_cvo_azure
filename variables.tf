@@ -13,7 +13,6 @@ variable "cm_vnet_name" {}
 variable "cm_subnet_name" {}
 variable "cm_username" {}
 variable "cm_password" {}
-
 variable "cvo_location" {}
 variable "cvo_name" {}
 variable "cvo_vnet_rg" {}

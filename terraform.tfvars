@@ -12,11 +12,11 @@ cm_vnet_rg              = "sluce.rg"
 cm_vnet_name            = "seannet"
 cm_subnet_name          = "default"
 cm_username             = "seanluce"
-cm_password             = "NetApp1234!"           ## declared as environment variable 'export TF_VAR_cm_password="mypassword"'
+#cm_password            = ""           ## declared as environment variable 'export TF_VAR_cm_password="mypassword"'
 
 cvo_location            = "northcentralus"
 cvo_name                = "lucescvo"
 cvo_vnet_rg             = "sluce.rg"
 cvo_vnet_name           = "seannet"
 cvo_subnet_name         = "default"
-#cvo_svm_password       ""           ## declared as environment variable 'export TF_VAR_cvo_svm_password="mypassword"'
+#cvo_svm_password       = ""           ## declared as environment variable 'export TF_VAR_cvo_svm_password="mypassword"'
