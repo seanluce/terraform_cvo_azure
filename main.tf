@@ -1,5 +1,6 @@
 # Configure the Azure and NetApp Cloud Manager providers
 terraform {
+  backend "local" {}
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
