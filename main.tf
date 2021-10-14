@@ -1,6 +1,5 @@
 # Configure the Azure and NetApp Cloud Manager providers
 terraform {
-  backend "local" {}
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -140,7 +139,6 @@ resource "azurerm_role_definition" "cm_custom_role" {
                         "Microsoft.Resources/tags/delete"]
     not_actions = []
   }
-
   assignable_scopes = [
     data.azurerm_subscription.azure_sub.id
   ]
