@@ -17,7 +17,7 @@ provider "azurerm" {
 }
 
 provider "netapp-cloudmanager" {
-  refresh_token = var.cm_refresh_token
+  refresh_token = var.CM_REFRESH_TOKEN
 }
 
 data "azurerm_subscription" "azure_sub" {
@@ -214,7 +214,7 @@ resource "netapp-cloudmanager_connector_azure" "cm_connector" {
   network_security_group_name = azurerm_network_security_group.cm_connector_nsg.name
   associate_public_ip_address = true
   admin_username              = var.cm_username
-  admin_password              = var.cm_password
+  admin_password              = var.CM_PASSWORD
   
 }
 
@@ -250,7 +250,7 @@ resource "netapp-cloudmanager_cvo_azure" "cvo_azure_single" {
     tag_value = var.owner
   }
   storage_type        = "Premium_LRS"
-  svm_password        = var.cvo_svm_password
+  svm_password        = var.CVO_SVM_PASSWORD
   client_id           = netapp-cloudmanager_connector_azure.cm_connector.client_id
   #workspace_id        = "" # first workspace is selected or created if none is specified
   capacity_tier       = "Blob"
