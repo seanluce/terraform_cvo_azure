@@ -1,7 +1,7 @@
 creator                 = "luces"
 owner                   = "luces"
 
-azure_subid             = "c560a042-4311-40cf-beb5-edc67991179e"
+azure_subid             = ""
 
 cm_connector_location   = "northcentralus"
 cm_connector_rg         = "luces.rg"
